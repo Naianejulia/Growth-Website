@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="Author" content="Naiane Júlia">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./Img/g.png">
+    <title>Growth</title>
+</head>
+<body>
+    <section>
+        <div class="circle"></div>
+            <header>
+                <a href="#"><img src="./Img/logo.png" class="logo"></a>
+                <div class="toggle" onclick="toggleMenu"></div>
+                <ul class="navigation">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Menu</a></li>
+                    <li><a href="#">Novidades</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </header>
+            <div class="content">
+                <div class="textBox">
+                    <h2>O que é suplemento alimentar?</h2>
+                    <p>Suplementos alimentares são substâncias com a finalidade de complementar a dieta. Esses produtos podem ser vitaminas, minerais, aminoácidos, enzimas, metabólicos, etc. e podem ser encontrados em diferentes formas, como comprimidos, cápsulas, cápsulas de gel, pós ou líquidos.</p>
+                     <a href="#">Leia Mais </a>
+                </div>
+
+                <div class="imgBox">
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide"> <img src="./Img/Cafeina.png" /></div>
+                          <div class="swiper-slide">
+                            <img src="./Img/Creatina.png" />
+                          </div>
+                          <div class="swiper-slide">
+                            <img src="./Img/Whey.png" />
+                          </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                      </div>
+                </div>
+            </div>
+            <ul class="sci">
+                <li><a href="https://www.instagram.com/growthsupplements/"><img src="./Img/instagram.png" width="45px" height="45px"></a></li>
+                <li><a href="https://twitter.com/GrowthOficial?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><img src="./Img/Twitter.png"width="45px" height="45px"></a></li>
+                <li><a href="#"><img src="./Img/Whatssap.png" width="45px" height="45px"></a></li>
+            </ul>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+    var swiper = new Swiper(".mySwiper", {
+      effect: "coverflow",
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: "auto",
+      coverflowEffect: {
+        rotate: 50,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows: true,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+      },
+      loop:true,
+    });
+
+    function toggleMenu() {
+        const menuToggle = document.querySelector('.toggle');
+        const navigation = document.querySelector('.navigation')
+        menuToggle.classList.toggle ('active')
+        menuToggle.classList.toggle ('active')
+    }
+  </script>
+</body>
+</html>
